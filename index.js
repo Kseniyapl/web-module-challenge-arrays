@@ -45,11 +45,12 @@ Use the copy function below to do the following:
   2. Return a copy of the received array  
 */
 
-function copy(/*your code here*/){
-  /*your code here*/
+
+function copy(arr){
+  let arrCopy=[...arr]
+    return(arrCopy)
 }    
-
-
+console.log("task 1, the copy of the array", copy(originalFlavors))
 
 
 
@@ -64,9 +65,15 @@ For Example: is31Flavors(originalFlavors) will return true if your code is worki
 */
 
 
-function is31Flavors(/*your code here*/){
- /*your code here*/
+function is31Flavors(arr){
+ if(arr.length === 31){
+   return true
+ }
+ else{
+   return false
+ }
 }
+console.log("task 2 is 31 items (true or false):", is31Flavors(originalFlavors))
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Corporate has come to you with an idea for a new flavor: Rainbow Sherbert! They think this will be a game changer. You need to modify the array to include this flavor. 
@@ -81,9 +88,12 @@ Use the addFlavor function below to do the following:
 */
 
 
-function addFlavor(/*your code here*/){
- /*your code here*/
+function addFlavor(arr, string){
+ arr.unshift(string)
+ return arr;
 }
+console.log("test 3, add the string", addFlavor(originalFlavors, "Rainbow Sherbert"))
+console.log("How many items are in the array", originalFlavors.length)
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -160,8 +170,9 @@ Use the filterByWord function below to do the following:
   DO NOT USE ADVANCED ARRAY METHODS (i.e. .filter) to solve this problem. 
 */
 
-function filterByWord(/*your code here*/){
-  /*your code here*/
+function filterByWord(arr, string){
+let newArr = [];
+  
 }
 
 
