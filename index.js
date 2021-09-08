@@ -182,17 +182,17 @@ Use the filterByWord function below to do the following:
 */
 
 function filterByWord(arr, string){
-let newArr = [];
-for (let i=0; i<arr.length; i++){
-  if (arr[i].includes(string)){
-    newArr.push(string[i]);
-  }
-}
-  return newArr;
-  
+  let newArr = [];
+    for (let i=0; i<arr.length; i++){
+      if (arr[i].includes(string)){
+        newArr.push(arr[i]);
+      }
+    }
+      return newArr;
+      
 }
 
-console.log("test 7, get items by word", filterByWord(originalFlavors, "Chocolate"))
+console.log("test 7, get items by word", filterByWord(originalFlavors, "Vanilla"))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
