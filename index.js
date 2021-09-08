@@ -107,9 +107,12 @@ Use the removeLastFlavor function below to do the following:
   For example: running removeLastFlavor(originalFlavors) would return ["Rainbow Sherbert", "Banana Nut Fudge",..."Vanilla"]
 */
 
-function removeLastFlavor(/*your code here*/){
- /*your code here*/
+function removeLastFlavor(arr){
+ arr.pop()
+ return arr;
 }
+console.log("task 4 original list", originalFlavors)
+console.log("task 4 last item removed", removeLastFlavor(originalFlavors))
 
 
 
@@ -124,9 +127,11 @@ Use the getFlavorByIndex function below to do the following:
   For example: running getFlavorByIndex(originalFlavors, 2) would return "Black Walnut", assuming Rainbow Sherbert has been added successfully
 */
 
-function getFlavorByIndex(/*your code here*/){
-  /*your code here*/
-}
+function getFlavorByIndex(arr, i){
+  return arr[i]
+
+  }
+console.log("test 5 return item by index", getFlavorByIndex(originalFlavors, 2))
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀
@@ -144,9 +149,15 @@ Use the removeFlavorByName function below to do the following:
   HINT: You can use .splice() for this
 */
 
-function removeFlavorByName(/*your code here*/){
-  /*your code here*/
+function removeFlavorByName(arr, string){
+  for(let i=0; i<arr.length; i++){  
+    if(arr[i]===string)
+    arr.splice(i, 1)
+  }
+  return arr
 }
+console.log("original ", originalFlavors)
+console.log("task 6 remove item by name", removeFlavorByName(originalFlavors, "Rainbow Sherbert" ))
 
 
 
@@ -172,9 +183,16 @@ Use the filterByWord function below to do the following:
 
 function filterByWord(arr, string){
 let newArr = [];
+for (let i=0; i<arr.length; i++){
+  if (arr[i].includes(string)){
+    newArr.push(string[i]);
+  }
+}
+  return newArr;
   
 }
 
+console.log("test 7, get items by word", filterByWord(originalFlavors, "Chocolate"))
 
 /* 💪💪💪💪💪🧁🍦🍨 STRETCH 🍨🍦🍫💪💪💪💪💪*/ 
 
